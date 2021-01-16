@@ -16,7 +16,7 @@ It contains the following components:
 
 It displays an interface that looks like this:
 
-![react todo app](./src/reac_todo_app.png)
+![react todo app](./src/react_todo_app.png)
 
 Optional:
 
