@@ -3,16 +3,21 @@ import React, { Component } from 'react';
 class Todo extends Component {
   constructor(props){
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+    this.handleForm = this.handleForm.bind(this);
   }
-  handleClick(evt){
+  handleDelete(evt){
     this.props.removeTodo(this.props.id);
+  }
+  handleForm(evt){
+    console.log("Click from Todo component");
   }
   render() {
     return (
       <div className="Todo">
         {this.props.content}
-        <button onClick={this.handleClick}>x</button>
+        <button onClick={this.handleForm}>Edit</button>
+        <button onClick={this.handleDelete}>x</button>
       </div>
     );
   }
