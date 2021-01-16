@@ -18,7 +18,7 @@ class TodoList extends Component {
       <div className="TodoList">
         <NewTodoForm addTodo={this.createTodo} />
         <div>
-          {this.state.todos.map(todo => <Todo todo={todo} />)}
+          {this.state.todos.map(todo => <Todo key={todo.id} id={todo.id} content={todo.content} />)}
         </div>
       </div>
     );
