@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# React Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
 
-## Available Scripts
+This project aims to create a Todo App that allows users to see, add, edit, and remove todos.
 
-In the project directory, you can run:
+It contains the following components:
 
-### `yarn start`
+- App: this component should render the TodoList component
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- TodoList: this component should render the NewTodoForm component and should render the list of Todo components. Place your state that contains all of the todos in this component.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- NewTodoForm: this component should render a form with one text input for the task to be created. When this form is submitted, a new Todo component should be created.
 
-### `yarn test`
+- Todo: this component should display a div with the task of the todo. For each Todo component, there should also be a button with the text “X” that when clicked, removes the todo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It displays an interface that looks like this:
 
-### `yarn build`
+![react todo app](./src/reac_todo_app.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Optional:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Add a button to mark a todo as completed: strike through the text of the todo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Instead of a button, make the todo clickable to mark it as completed. A user can toggle it on and off by clicking.
 
-### `yarn eject`
+- Add some styling! E.g. Use a CSS animation that fades out a Todo when it is deleted.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Save your todos in localStorage and retrieve them when the page loads.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Technologies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+*Languages:* Javascript, HTML, CSS
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+*Library:* React
 
-## Learn More
+### Key features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* List all the todos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Add a new todo
 
-### Code Splitting
+* Delete a todo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Edit a todo
 
-### Analyzing the Bundle Size
+### Poject status
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The project is done.
 
-### Making a Progressive Web App
+### Credits & Sources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Another small project from [The Modern React Bootcamp](https://www.udemy.com/course/modern-react-bootcamp)
