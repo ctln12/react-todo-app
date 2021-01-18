@@ -13,7 +13,7 @@ class NewTodoForm extends Component {
   }
   handleSubmit(evt){
     evt.preventDefault();
-    this.props.addTodo({...this.state, id: uuidv4() });
+    this.props.addTodo({...this.state, id: uuidv4(), completed: false });
     this.setState({ content: ""});
   }
   render() {

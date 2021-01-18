@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Todo.css';
 import EditTodoForm from './EditTodoForm';
 
 class Todo extends Component {
@@ -10,16 +11,20 @@ class Todo extends Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.toggleForm = this.toggleForm.bind(this);
     this.updateTodo = this.updateTodo.bind(this);
+    this.toggleCompleted = this.toggleCompleted.bind(this);
   }
-  handleDelete(evt){
+  handleDelete(){
     this.props.removeTodo(this.props.todo.id);
   }
   toggleForm(){
-    this.setState({ editable: !this.state.editable })
+    this.setState({ editable: !this.state.editable });
   }
   updateTodo(todo){
     this.props.modifyTodo(todo);
     this.toggleForm();
+  }
+  toggleCompleted(){
+    this.props.completeTodo(this.props.todo.id);
   }
   render() {
     let result;
@@ -27,7 +32,9 @@ class Todo extends Component {
       result = <EditTodoForm todo={this.props.todo} updateTodo={this.updateTodo} />
     } else {
        result = (<div className="Todo">
-        {this.props.todo.content}
+        <span className={this.props.todo.completed ? 'completed' : ''} onClick={this.toggleCompleted}>
+          {this.props.todo.content}
+        </span>
         <button onClick={this.toggleForm}>Edit</button>
         <button onClick={this.handleDelete}>x</button>
       </div>)

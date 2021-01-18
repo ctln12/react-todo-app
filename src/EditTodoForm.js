@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 class EditTodoForm extends Component {
   constructor(props){
     super(props);
-    this.state = { content: this.props.todo.content, id: this.props.todo.id }
+    this.state = {
+      content: this.props.todo.content,
+      id: this.props.todo.id,
+      completed: this.props.todo.completed
+    }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -12,7 +16,7 @@ class EditTodoForm extends Component {
   }
   handleSubmit(evt){
     evt.preventDefault();
-    this.props.updateTodo({content: this.state.content, id: this.state.id });
+    this.props.updateTodo(this.state);
   }
   render() {
     return (
