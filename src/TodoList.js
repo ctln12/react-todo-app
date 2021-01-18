@@ -37,22 +37,21 @@ class TodoList extends Component {
     todo.classList.add("hide");
   }
   render() {
+    const todos = this.state.todos.map(todo => (
+      <div id={todo.id} key={todo.id}>
+        <Todo
+          id={todo.id}
+          content={todo.content}
+          removeTodo={this.deleteTodo}
+          displayForm={this.displayForm}
+        />
+      <EditTodoForm todo={todo} modifyTodo={this.editTodo} />
+      </div>
+    ))
     return (
       <div className="TodoList">
         <NewTodoForm addTodo={this.createTodo} />
-        <div>
-          {this.state.todos.map(todo => (
-            <div id={todo.id} key={todo.id}>
-              <Todo
-                id={todo.id}
-                content={todo.content}
-                removeTodo={this.deleteTodo}
-                displayForm={this.displayForm}
-              />
-            <EditTodoForm todo={todo} modifyTodo={this.editTodo} />
-            </div>
-          ))}
-        </div>
+        <div className="todos">{todos}</div>
       </div>
     );
   }
