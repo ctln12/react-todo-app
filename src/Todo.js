@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Todo.css';
 
 class Todo extends Component {
   constructor(props){
@@ -10,7 +11,7 @@ class Todo extends Component {
     this.props.removeTodo(this.props.id);
   }
   handleForm(evt){
-    console.log("Click from Todo component");
+    this.props.displayForm(this.props.id);
   }
   render() {
     return (

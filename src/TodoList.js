@@ -29,17 +29,25 @@ class TodoList extends Component {
     newTodos[todoIndex] = {...newTodos[todoIndex], content: content };
     this.setState({ todos: newTodos });
   }
+  displayForm(todoId){
+    const todoDiv = document.getElementById(todoId);
+    const editTodoForm = todoDiv.querySelector("form.EditTodoForm");
+    const todo = todoDiv.querySelector(".Todo");
+    editTodoForm.classList.add("display");
+    todo.classList.add("hide");
+  }
   render() {
     return (
       <div className="TodoList">
         <NewTodoForm addTodo={this.createTodo} />
         <div>
           {this.state.todos.map(todo => (
-            <div key={todo.id}>
+            <div id={todo.id} key={todo.id}>
               <Todo
                 id={todo.id}
                 content={todo.content}
                 removeTodo={this.deleteTodo}
+                displayForm={this.displayForm}
               />
             <EditTodoForm todo={todo} modifyTodo={this.editTodo} />
             </div>

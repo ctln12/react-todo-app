@@ -14,10 +14,15 @@ class EditTodoForm extends Component {
   handleSubmit(evt){
     evt.preventDefault();
     this.props.modifyTodo({content: this.state.content, id: this.state.id });
+    const todoDiv = document.getElementById(this.state.id);
+    const editTodoForm = todoDiv.querySelector("form.EditTodoForm");
+    const todo = todoDiv.querySelector(".Todo");
+    editTodoForm.classList.remove("display");
+    todo.classList.remove("hide");
   }
   render() {
     return (
-      <form className="EditTodoForm display" onSubmit={this.handleSubmit}>
+      <form className="EditTodoForm" onSubmit={this.handleSubmit}>
         <label htmlFor="editTodo">Edit Todo</label>
         <input
           id="editTodo"
