@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
-import './Todo.css';
+import EditTodoForm from './EditTodoForm';
 
 class Todo extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      editable: false
+    }
     this.handleDelete = this.handleDelete.bind(this);
-    this.handleForm = this.handleForm.bind(this);
+    this.toggleForm = this.toggleForm.bind(this);
+    this.updateTodo = this.updateTodo.bind(this);
   }
   handleDelete(evt){
-    this.props.removeTodo(this.props.id);
+    this.props.removeTodo(this.props.todo.id);
   }
-  handleForm(evt){
-    this.props.displayForm(this.props.id);
+  toggleForm(){
+    this.setState({ editable: !this.state.editable })
+  }
+  updateTodo(todo){
+    this.props.modifyTodo(todo);
+    this.toggleForm();
   }
   render() {
-    return (
-      <div className="Todo">
-        {this.props.content}
-        <button onClick={this.handleForm}>Edit</button>
+    let result;
+    if (this.state.editable) {
+      result = <EditTodoForm todo={this.props.todo} updateTodo={this.updateTodo} />
+    } else {
+       result = (<div className="Todo">
+        {this.props.todo.content}
+        <button onClick={this.toggleForm}>Edit</button>
         <button onClick={this.handleDelete}>x</button>
-      </div>
-    );
+      </div>)
+    }
+    return result;
   }
 }
 

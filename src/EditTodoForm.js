@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './EditTodoForm.css';
 
 class EditTodoForm extends Component {
   constructor(props){
@@ -13,12 +12,7 @@ class EditTodoForm extends Component {
   }
   handleSubmit(evt){
     evt.preventDefault();
-    this.props.modifyTodo({content: this.state.content, id: this.state.id });
-    const todoDiv = document.getElementById(this.state.id);
-    const editTodoForm = todoDiv.querySelector("form.EditTodoForm");
-    const todo = todoDiv.querySelector(".Todo");
-    editTodoForm.classList.remove("display");
-    todo.classList.remove("hide");
+    this.props.updateTodo({content: this.state.content, id: this.state.id });
   }
   render() {
     return (

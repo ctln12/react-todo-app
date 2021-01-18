@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Todo from "./Todo";
 import NewTodoForm from "./NewTodoForm";
-import EditTodoForm from "./EditTodoForm";
 
 class TodoList extends Component {
   constructor(props){
@@ -29,25 +28,15 @@ class TodoList extends Component {
     newTodos[todoIndex] = {...newTodos[todoIndex], content: content };
     this.setState({ todos: newTodos });
   }
-  displayForm(todoId){
-    const todoDiv = document.getElementById(todoId);
-    const editTodoForm = todoDiv.querySelector("form.EditTodoForm");
-    const todo = todoDiv.querySelector(".Todo");
-    editTodoForm.classList.add("display");
-    todo.classList.add("hide");
-  }
   render() {
     const todos = this.state.todos.map(todo => (
-      <div id={todo.id} key={todo.id}>
         <Todo
-          id={todo.id}
-          content={todo.content}
+          key={todo.id}
+          todo={todo}
           removeTodo={this.deleteTodo}
-          displayForm={this.displayForm}
+          modifyTodo={this.editTodo}
         />
-      <EditTodoForm todo={todo} modifyTodo={this.editTodo} />
-      </div>
-    ))
+    ));
     return (
       <div className="TodoList">
         <NewTodoForm addTodo={this.createTodo} />
