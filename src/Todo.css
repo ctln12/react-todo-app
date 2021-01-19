@@ -4,10 +4,11 @@
   margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
-.Todo span {
-  cursor: pointer;
+.Todo:hover {
+  transform: scale(1.01);
 }
 
 .completed {
