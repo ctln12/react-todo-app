@@ -12,8 +12,28 @@
 }
 
 .completed {
-  text-decoration: line-through;
+  position: relative;
   color: white;
+}
+
+.completed::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  animation-name: strike;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes strike{
+  0%   { width : 0; }
+  100% { width: 100%; }
 }
 
 .Todo-buttons {
