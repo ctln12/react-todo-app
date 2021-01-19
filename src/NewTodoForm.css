@@ -19,7 +19,8 @@
 }
 
 .NewTodoForm button {
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  opacity: 0.7;
   background-color: transparent;
   padding: 9px 12px;
   margin-left: 5px;
@@ -27,4 +28,9 @@
   font-weight: 600;
   min-width: 56px;
   cursor: pointer;
+}
+
+.NewTodoForm button:hover {
+  border: 1px solid black;
+  opacity: 1;
 }
