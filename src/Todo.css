@@ -1,4 +1,18 @@
+.Todo {
+  background-color: #ffced6;
+  padding: 15px 40px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .completed {
   text-decoration: line-through;
   color: lightgray;
+}
+
+.Todo-buttons button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

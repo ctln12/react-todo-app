@@ -35,8 +35,10 @@ class Todo extends Component {
         <span className={this.props.todo.completed ? 'completed' : ''} onClick={this.toggleCompleted}>
           {this.props.todo.content}
         </span>
-        <button onClick={this.toggleForm}>Edit</button>
-        <button onClick={this.handleDelete}>x</button>
+        <div className="Todo-buttons">
+          <button onClick={this.toggleForm}><i className="fas fa-pen"></i></button>
+          <button onClick={this.handleDelete}><i className="fas fa-trash"></i></button>
+        </div>
       </div>)
     }
     return result;
