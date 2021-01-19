@@ -1,0 +1,28 @@
+.NewTodoForm {
+  padding: 15px 40px;
+}
+
+.NewTodoForm label {
+  font-weight: 600;
+}
+
+.NewTodoForm div {
+  margin-top: 5px;
+  display: flex;
+}
+
+.NewTodoForm input#content {
+  height: 25px;
+  padding: 5px 10px;
+  border: none;
+  flex-grow: 1;
+}
+
+.NewTodoForm button {
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 9px 12px;
+  margin-left: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
