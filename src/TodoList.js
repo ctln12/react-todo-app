@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import "./TodoList.css";
 import Todo from "./Todo";
 import NewTodoForm from "./NewTodoForm";
 
@@ -50,6 +51,7 @@ class TodoList extends Component {
     ));
     return (
       <div className="TodoList">
+        <h1>Todo List</h1>
         <NewTodoForm addTodo={this.createTodo} />
         <div className="todos">{todos}</div>
       </div>
