@@ -7,7 +7,7 @@ import NewTodoForm from "./NewTodoForm";
 class TodoList extends Component {
   constructor(props){
     super(props);
-    this.state = { todos: [{ content: "Do laundry", id: uuidv4(), completed: false }, { content: "Do homework", id: uuidv4(), completed: false }, { content: "Do yoga", id: uuidv4(), completed: false }] };
+    this.state = { todos: [{ content: "Do daily morning mediation", id: uuidv4(), completed: true }, { content: "Start learning React", id: uuidv4(), completed: false }, { content: "Code a todo app", id: uuidv4(), completed: false }] };
     this.createTodo = this.createTodo.bind(this);
     this.deleteTodo = this.deleteTodo.bind(this);
     this.editTodo = this.editTodo.bind(this);
