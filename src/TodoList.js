@@ -52,8 +52,8 @@ class TodoList extends Component {
     return (
       <div className="TodoList">
         <h1>Todo List</h1>
-        <NewTodoForm addTodo={this.createTodo} />
         <div className="todos">{todos}</div>
+        <NewTodoForm addTodo={this.createTodo} />
       </div>
     );
   }

@@ -1,11 +1,11 @@
 .TodoList {
   margin: 50px auto;
   width: 30%;
-  padding: 20px;
+  padding: 20px 0;
   background-color: lightpink;
 }
 
 .TodoList h1 {
-  text-align: center;
+  padding: 0 40px;
   margin-top: 0;
 }
