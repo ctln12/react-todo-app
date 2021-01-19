@@ -52,6 +52,7 @@ class TodoList extends Component {
     return (
       <div className="TodoList">
         <h1>Todo List</h1>
+        <p>Get things done. One task at a time.</p>
         <div className="todos">{todos}</div>
         <NewTodoForm addTodo={this.createTodo} />
       </div>
