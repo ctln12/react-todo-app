@@ -2,7 +2,8 @@
   margin: 50px auto;
   width: 30%;
   padding: 20px 0;
-  background-color: lightpink;
+  background-color: #ffafcc;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .TodoList h1 {
