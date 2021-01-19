@@ -44,6 +44,8 @@ Optional:
 
 * Edit a todo
 
+* Strike through a todo to mark it as completed
+
 ### Poject status
 
 The project is done.
