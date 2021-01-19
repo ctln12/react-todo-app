@@ -16,3 +16,27 @@
   margin-top: 0;
   font-size: 15px;
 }
+
+@media (max-width: 1200px) {
+  .TodoList {
+    width: 40%;
+  }
+}
+
+@media (max-width: 992px) {
+  .TodoList {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .TodoList {
+    width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  .TodoList {
+    width: 80%;
+  }
+}
