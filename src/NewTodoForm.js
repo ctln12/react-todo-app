@@ -29,7 +29,7 @@ class NewTodoForm extends Component {
             onChange={this.handleChange}
             value={this.state.content}
           />
-          <button>ADD TODO</button>
+          <button> ADD </button>
         </div>
       </form>
     );

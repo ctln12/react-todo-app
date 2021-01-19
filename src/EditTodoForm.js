@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./EditTodoForm.css";
 
 class EditTodoForm extends Component {
   constructor(props){
@@ -21,14 +22,13 @@ class EditTodoForm extends Component {
   render() {
     return (
       <form className="EditTodoForm" onSubmit={this.handleSubmit}>
-        <label htmlFor="editTodo">Edit Todo</label>
         <input
-          id="editTodo"
-          name="editTodo"
+          id="content"
+          name="content"
           onChange={this.handleChange}
           value={this.state.content}
         />
-        <button>Modify todo</button>
+        <button>SAVE</button>
       </form>
     );
   }
