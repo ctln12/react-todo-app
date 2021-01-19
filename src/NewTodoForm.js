@@ -25,7 +25,7 @@ class NewTodoForm extends Component {
           <input
             id="content"
             name="content"
-            placeholder="e.g. Learn React"
+            placeholder="What do you want to do?"
             onChange={this.handleChange}
             value={this.state.content}
           />
