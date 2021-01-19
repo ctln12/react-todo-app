@@ -16,6 +16,10 @@
   color: white;
 }
 
+.Todo-buttons {
+  display: inline-flex;
+}
+
 .Todo-buttons button {
   border: none;
   background-color: transparent;
